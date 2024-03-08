@@ -2,14 +2,14 @@ CC	=	c++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-SRC		=	ClapTrap.cpp \
+SRC		=	class/ClapTrap.cpp \
 			main.cpp
 
 OBJ		=	$(addprefix obj/, $(SRC:.cpp=.o))
 
 OBJ_DIR	=	$(sort $(dir $(OBJ)))
 
-HEADER	=	
+HEADER	=	-Iclass
 
 NAME	=	ClapTrap
 

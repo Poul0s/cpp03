@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/08 13:22:28 by psalame           #+#    #+#             */
-/*   Updated: 2024/03/07 18:19:11 by psalame          ###   ########.fr       */
+/*   Created: 2024/03/07 18:19:47 by psalame           #+#    #+#             */
+/*   Updated: 2024/03/07 18:30:26 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include <iostream>
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
+# include "ClapTrap.hpp"
 
-int	main(void)
+class ScavTrap : public ClapTrap
 {
-	ClapTrap bot = ClapTrap("bot");
+	public:
+		// constructor/destructor
+		ScavTrap(const std::string name);
+		ScavTrap(const ScavTrap &copy);
+		~ScavTrap(void);
 
-	bot.attack("dummy");
-	bot.takeDamage(1);
-	bot.takeDamage(5);
-	bot.attack("dummy");
-	bot.attack("dummy");
-	bot.attack("dummy");
-	bot.attack("dummy");
-	bot.attack("dummy");
-	bot.attack("dummy");
-	bot.beRepaired(15);
-	bot.attack("dummy");
-	bot.attack("dummy");
-	bot.attack("dummy"); // cant attack
-}
+		// operator overload
+		ScavTrap&	operator=(const ScavTrap& copy);
+
+		// member functions
+		void	guardGate(void);
+	
+	private:
+		bool	_guardKeeperMode;
+};
+
+#endif

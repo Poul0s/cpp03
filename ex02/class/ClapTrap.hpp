@@ -3,33 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: psalame <psalame@student.42.fr>            +#+  +:+       +#+        */
+/*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/08 13:03:55 by psalame           #+#    #+#             */
-/*   Updated: 2024/01/13 17:36:11 by psalame          ###   ########.fr       */
+/*   Created: 2024/03/07 15:41:29 by psalame           #+#    #+#             */
+/*   Updated: 2024/03/07 18:29:52 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_CPP
-# define CLAPTRAP_CPP
-# include <iostream>
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
+# include <string>
 
-class ClapTrap
-{
+class ClapTrap {
 	public:
-		ClapTrap();
-		ClapTrap( std::string name );
-		~ClapTrap();
+		// constructor/destructor
+		ClapTrap(const std::string name);
+		ClapTrap(const ClapTrap &copy);
+		~ClapTrap(void);
 
+		// operator overload
+		ClapTrap&	operator=(const ClapTrap& copy);
+
+		// member functions
 		void	attack(const std::string& target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
 
 	protected:
-		std::string		Name;
-		unsigned int	HitPoint;
-		unsigned int	EnergyPoint;
-		unsigned int	AttackDamage;
+		std::string		_name;
+		unsigned int	_hitPoints;
+		unsigned int	_energyPoints;
+		unsigned int	_attackDamage;
 };
 
 #endif

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragClap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: psalame <psalame@student.42.fr>            +#+  +:+       +#+        */
+/*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/13 17:06:55 by psalame           #+#    #+#             */
-/*   Updated: 2024/01/13 17:52:37 by psalame          ###   ########.fr       */
+/*   Created: 2024/03/07 18:19:47 by psalame           #+#    #+#             */
+/*   Updated: 2024/03/07 18:51:05 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,16 @@
 class FragTrap : public ClapTrap
 {
 	public:
-		FragTrap( std::string name );
-		~FragTrap();
+		// constructor/destructor
+		FragTrap(const std::string name);
+		FragTrap(const FragTrap &copy);
+		~FragTrap(void);
 
-		void	attack(const std::string& target);
-		void	highFivesGuys();
+		// operator overload
+		FragTrap&	operator=(const FragTrap& copy);
 
-	private:
+		// member functions
+		void	highFivesGuys(void);
 };
 
 #endif

@@ -2,15 +2,15 @@ CC	=	c++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-SRC		=	ClapTrap.cpp \
-			ScavTrap.cpp \
-			main.cpp
+SRC		=	class/ClapTrap.cpp \
+			class/ScavTrap.cpp \
+			main.cpp \
 
 OBJ		=	$(addprefix obj/, $(SRC:.cpp=.o))
 
 OBJ_DIR	=	$(sort $(dir $(OBJ)))
 
-HEADER	=	
+HEADER	=	-Iclass
 
 NAME	=	ScavTrap
 

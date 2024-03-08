@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/08 13:22:28 by psalame           #+#    #+#             */
-/*   Updated: 2024/03/07 18:19:11 by psalame          ###   ########.fr       */
+/*   Created: 2024/03/08 14:18:38 by psalame           #+#    #+#             */
+/*   Updated: 2024/03/08 19:23:05 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include <iostream>
+#ifndef DIAMONDTRAP_HPP
+# define DIAMONDTRAP_HPP
+# include "ClapTrap.hpp"
+# include "ScavTrap.hpp"
+# include "ClapTrap.hpp"
 
-int	main(void)
+class DiamondTrap : public ScavTrap, FragTrap
 {
-	ClapTrap bot = ClapTrap("bot");
+	public:
+		DiamondTrap(std::string name);
 
-	bot.attack("dummy");
-	bot.takeDamage(1);
-	bot.takeDamage(5);
-	bot.attack("dummy");
-	bot.attack("dummy");
-	bot.attack("dummy");
-	bot.attack("dummy");
-	bot.attack("dummy");
-	bot.attack("dummy");
-	bot.beRepaired(15);
-	bot.attack("dummy");
-	bot.attack("dummy");
-	bot.attack("dummy"); // cant attack
-}
+	private:
+		std::string	_name;
+};
+
+#endif

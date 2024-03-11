@@ -6,7 +6,7 @@
 /*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 15:50:45 by psalame           #+#    #+#             */
-/*   Updated: 2024/03/07 18:24:00 by psalame          ###   ########.fr       */
+/*   Updated: 2024/03/11 13:38:58 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,18 @@
 
 // constructor/destructor
 
-ClapTrap::ClapTrap(const std::string name)
+ClapTrap::ClapTrap(void)
 {
 	std::cout << "ClapTrap default constructor called" << std::endl;
+	this->_name = "DefaultName";
+	this->_hitPoints = 10;
+	this->_energyPoints = 10;
+	this->_attackDamage = 0;
+}
+
+ClapTrap::ClapTrap(const std::string name)
+{
+	std::cout << "ClapTrap void constructor called" << std::endl;
 	this->_name = name;
 	this->_hitPoints = 10;
 	this->_energyPoints = 10;

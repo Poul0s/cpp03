@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/07 18:19:47 by psalame           #+#    #+#             */
-/*   Updated: 2024/03/11 14:29:01 by psalame          ###   ########.fr       */
+/*   Created: 2024/03/11 13:41:10 by psalame           #+#    #+#             */
+/*   Updated: 2024/03/11 14:27:21 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
-# include "ClapTrap.hpp"
+#include <iostream>
+#include "DiamondTrap.hpp"
+#include "FragTrap.hpp"
+#include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 
-class FragTrap : virtual public ClapTrap
+int	main(void)
 {
-	public:
-		// constructor/destructor
-		FragTrap(void);
-		FragTrap(const std::string name);
-		FragTrap(const FragTrap &copy);
-		~FragTrap(void);
+	DiamondTrap bot1 ("bot1");
+	DiamondTrap bot2 ("bot2");
+	bot1.attack("bot2");
+	bot2.takeDamage(30);
+	bot2.highFivesGuys();
+	bot1.guardGate();
 
-		// operator overload
-		FragTrap&	operator=(const FragTrap& copy);
+	bot1.whoAmI();
+	bot2.whoAmI();
 
-		// member functions
-		void	highFivesGuys(void);
-};
-
-#endif
+	return (0);
+}

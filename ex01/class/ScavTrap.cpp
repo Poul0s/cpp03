@@ -6,7 +6,7 @@
 /*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 18:21:19 by psalame           #+#    #+#             */
-/*   Updated: 2024/03/07 18:34:12 by psalame          ###   ########.fr       */
+/*   Updated: 2024/03/11 13:33:28 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,20 @@ ScavTrap&	ScavTrap::operator=( const ScavTrap& copy )
 
 
 // member functions
+
+void	ScavTrap::attack(const std::string& target)
+{
+	if (this->_energyPoints > 0)
+	{
+		this->_energyPoints--;
+		std::cout << "ScavTrap " << this->_name
+			<< " attacks " << target
+			<< ", causing " << this->_attackDamage << " points of damage!"
+		<< std::endl;
+	}
+	else
+		std::cout << "ScavTrap " << this->_name << " can't attack, he has no more energy points left." << std::endl;
+}
 
 void	ScavTrap::guardGate(void)
 {

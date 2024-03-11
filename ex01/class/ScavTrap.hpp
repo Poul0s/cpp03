@@ -6,7 +6,7 @@
 /*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 18:19:47 by psalame           #+#    #+#             */
-/*   Updated: 2024/03/07 18:30:26 by psalame          ###   ########.fr       */
+/*   Updated: 2024/03/11 13:33:45 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class ScavTrap : public ClapTrap
 		ScavTrap&	operator=(const ScavTrap& copy);
 
 		// member functions
+		void	attack(const std::string& target);
 		void	guardGate(void);
 	
 	private:

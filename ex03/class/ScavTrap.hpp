@@ -6,7 +6,7 @@
 /*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 18:19:47 by psalame           #+#    #+#             */
-/*   Updated: 2024/03/07 18:30:26 by psalame          ###   ########.fr       */
+/*   Updated: 2024/03/11 14:28:58 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 # define SCAVTRAP_HPP
 # include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
 	public:
 		// constructor/destructor
+		ScavTrap(void);
 		ScavTrap(const std::string name);
 		ScavTrap(const ScavTrap &copy);
 		~ScavTrap(void);
@@ -26,6 +27,7 @@ class ScavTrap : public ClapTrap
 		ScavTrap&	operator=(const ScavTrap& copy);
 
 		// member functions
+		void	attack(const std::string& target);
 		void	guardGate(void);
 	
 	private:

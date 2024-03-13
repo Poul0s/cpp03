@@ -6,7 +6,7 @@
 /*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 15:41:29 by psalame           #+#    #+#             */
-/*   Updated: 2024/03/11 13:38:39 by psalame          ###   ########.fr       */
+/*   Updated: 2024/03/13 19:13:12 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ class ClapTrap {
 	public:
 		// constructor/destructor
 		ClapTrap(void);
-		ClapTrap(const std::string name);
+		ClapTrap(const std::string& name);
 		ClapTrap(const ClapTrap &copy);
-		~ClapTrap(void);
+		virtual ~ClapTrap(void);
 
 		// operator overload
 		ClapTrap&	operator=(const ClapTrap& copy);

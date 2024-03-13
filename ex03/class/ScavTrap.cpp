@@ -6,7 +6,7 @@
 /*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 18:21:19 by psalame           #+#    #+#             */
-/*   Updated: 2024/03/11 13:39:31 by psalame          ###   ########.fr       */
+/*   Updated: 2024/03/13 19:13:16 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ ScavTrap::ScavTrap(void) : ClapTrap()
 	this->_guardKeeperMode = false;
 }
 
-ScavTrap::ScavTrap(const std::string name) : ClapTrap(name)
+ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
 {
 	std::cout << "ScavTrap name constructor called" << std::endl;
 	this->_hitPoints = 100;
@@ -61,7 +61,11 @@ ScavTrap&	ScavTrap::operator=( const ScavTrap& copy )
 
 void	ScavTrap::attack(const std::string& target)
 {
-	if (this->_energyPoints > 0)
+	if (this->_energyPoints == 0)
+		std::cout << "ScavTrap " << this->_name << " can't attack, he has no more energy points left." << std::endl;
+	else if (this->_hitPoints == 0)
+		std::cout << "ScavTrap " << this->_name << " can't attack, he died." << std::endl;
+	else
 	{
 		this->_energyPoints--;
 		std::cout << "ScavTrap " << this->_name
@@ -69,8 +73,6 @@ void	ScavTrap::attack(const std::string& target)
 			<< ", causing " << this->_attackDamage << " points of damage!"
 		<< std::endl;
 	}
-	else
-		std::cout << "ScavTrap " << this->_name << " can't attack, he has no more energy points left." << std::endl;
 }
 
 void	ScavTrap::guardGate(void)

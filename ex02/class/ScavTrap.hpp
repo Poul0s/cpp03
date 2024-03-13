@@ -6,7 +6,7 @@
 /*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 18:19:47 by psalame           #+#    #+#             */
-/*   Updated: 2024/03/11 13:34:16 by psalame          ###   ########.fr       */
+/*   Updated: 2024/03/13 19:13:09 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ class ScavTrap : public ClapTrap
 {
 	public:
 		// constructor/destructor
-		ScavTrap(const std::string name);
+		ScavTrap(const std::string& name);
 		ScavTrap(const ScavTrap &copy);
 		~ScavTrap(void);
 

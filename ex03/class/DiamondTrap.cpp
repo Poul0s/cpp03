@@ -6,7 +6,7 @@
 /*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 14:14:02 by psalame           #+#    #+#             */
-/*   Updated: 2024/03/11 14:24:35 by psalame          ###   ########.fr       */
+/*   Updated: 2024/03/13 19:14:11 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <iostream>
 
 // constructor/destructor
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_trap")
+DiamondTrap::DiamondTrap(const std::string& name) : ClapTrap(name + "_clap_trap")
 {
 	std::cout << "DiamondTrap name constructor called" << std::endl;
 	this->_name = name;

@@ -6,14 +6,14 @@
 /*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 18:21:19 by psalame           #+#    #+#             */
-/*   Updated: 2024/03/07 18:54:35 by psalame          ###   ########.fr       */
+/*   Updated: 2024/03/13 19:13:05 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 #include <iostream>
 
-FragTrap::FragTrap(const std::string name) : ClapTrap(name)
+FragTrap::FragTrap(const std::string& name) : ClapTrap(name)
 {
 	std::cout << "FragTrap default constructor called" << std::endl;
 	this->_hitPoints = 100;

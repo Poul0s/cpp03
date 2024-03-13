@@ -6,7 +6,7 @@
 /*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 18:21:19 by psalame           #+#    #+#             */
-/*   Updated: 2024/03/11 13:39:24 by psalame          ###   ########.fr       */
+/*   Updated: 2024/03/13 19:13:13 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ FragTrap::FragTrap(void) : ClapTrap()
 	this->_attackDamage = 30;
 }
 
-FragTrap::FragTrap(const std::string name) : ClapTrap(name)
+FragTrap::FragTrap(const std::string& name) : ClapTrap(name)
 {
 	std::cout << "FragTrap name constructor called" << std::endl;
 	this->_hitPoints = 100;

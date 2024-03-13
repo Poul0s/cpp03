@@ -6,7 +6,7 @@
 /*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 14:18:38 by psalame           #+#    #+#             */
-/*   Updated: 2024/03/11 14:23:50 by psalame          ###   ########.fr       */
+/*   Updated: 2024/03/13 19:13:31 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class DiamondTrap : public FragTrap, public ScavTrap
 {
 	public:
 		// constructor/destructor
-		DiamondTrap(std::string name);
+		DiamondTrap(const std::string& name);
 		DiamondTrap(const DiamondTrap& copy);
 		~DiamondTrap(void);
 
